@@ -1,3 +1,7 @@
+pub extern crate strum;
+#[macro_use]
+pub extern crate strum_macros;
+
 mod common;
 
 mod public;

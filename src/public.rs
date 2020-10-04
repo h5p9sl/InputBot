@@ -1,12 +1,13 @@
 use crate::common::*;
 use std::{thread::sleep, time::Duration};
+use strum_macros::{EnumString, EnumVariantNames};
 
 pub enum BlockInput {
     Block,
     DontBlock,
 }
 
-#[derive(Debug, Eq, PartialEq, Hash, Copy, Clone)]
+#[derive(Debug, Eq, PartialEq, Hash, Copy, Clone, EnumString, EnumVariantNames)]
 pub enum KeybdKey {
     BackspaceKey,
     TabKey,
@@ -100,7 +101,7 @@ pub enum KeybdKey {
     OtherKey(u64),
 }
 
-#[derive(Debug, Eq, PartialEq, Hash, Copy, Clone)]
+#[derive(Debug, Eq, PartialEq, Hash, Copy, Clone, EnumString)]
 pub enum MouseButton {
     LeftButton,
     MiddleButton,
