@@ -201,6 +201,12 @@ fn get_keybd_key(c: char) -> Option<KeybdKey> {
     }
 }
 
+impl From<char> for KeybdKey {
+    fn from(c: char) -> Self {
+        get_keybd_key(c).unwrap()
+    }
+}
+
 pub struct KeySequence(pub &'static str);
 
 impl KeySequence {
